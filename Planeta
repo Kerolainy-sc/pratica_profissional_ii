@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main(){
+   int opcao;
+   char planeta [50];
+   printf("Cadastrar planeta? 1 = sim / 2 = não");
+   scanf("%d", &opcao);
+   while(opcao == 1){
+       printf("Cadastre o planeta: ");
+       getchar();
+       fgets(planeta, 50, stdin);
+       
+       printf("Continuar? 1 = sim / 2 = não ");
+       scanf("%d", &opção);
+       
+   }
+   
+   printf("Fim do programa");
+   return 0;
+}
