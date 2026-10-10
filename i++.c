@@ -2,18 +2,29 @@
 #include <stdlib.h>
 
 int main() {
-    float altura[5];
+    float nota[4];
+    float soma = 0.0f; // Inicializa soma
     int i;
-    
-    for(i=0; i<=4; i++){
-        printf("Digite %iº altura: ", i+1);
-        scanf("%f", &altura[i]);
-        system("clear");
+
+    // Entrada das notas
+    for (i = 0; i < 4; i++) {
+        printf("Digite %iª nota: ", i + 1);
+        if (scanf("%f", &nota[i]) != 1) {
+            printf("Entrada inválida!\n");
+            return 1;
+        }
+        soma += nota[i]; // Acumula a soma
+        system("clear"); // No Windows use "cls"
     }
-    
-    for(i=0; i<=4; i++){
-        printf("%iº Altura: %.2fm \n", i, altura[i]);
+
+    // Saída das notas
+    for (i = 0; i < 4; i++) {
+        printf("%iª nota: %.2f\n", i + 1, nota[i]);
     }
- 
+
+    // Cálculo e exibição da média
+    float media = soma / 4.0f;
+    printf("Média: %.2f\n", media);
+
     return 0;
 }
