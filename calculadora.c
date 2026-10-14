@@ -75,7 +75,7 @@ int main() {
                 }
                 break;
             default:
-                printf("\nOpcao invalida! Por favor, escolha uma opcao valida.\n");
+                printf("\nOpcao invalida!\n");
         }
 
     } while (opcao != 0);
