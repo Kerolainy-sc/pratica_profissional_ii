@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+void blackfriday(float *desconto){
+    *desconto * 0.9; //10% de desconto
+}
+
+int main(){
+    float produto = 100.0;
+    
+    printf("Antes: R$ %.2f\n, produto");
+    blackfriday(&produto);
+    printf("Depois: R$ %.2f\n");
+
+    return 0;
+}
