@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+// Recebe o ENDERECO do saldo (ponteiro) e o valor a depositar 
+void depositar(float *saldo, float valor) {
+    *saldo = * saldo + valor; // Altera o saldo original no endereço recebido
+}
+
+int main(){
+    float conta = 500.0; //Saldo inicial
+    printf("Saldo antes: R$ %2f\n", conta);
+    depositar(&conta, 200.0);// & Envia o endereço de "conta"
+    printf("Saldo depois: R$ %2f\n", conta);  // Saldo atualizado: R$700.00
+    
+    
+    return 0;
+}
